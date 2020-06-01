@@ -1,5 +1,5 @@
 site_name: {{ cookiecutter.project_name }}
-site_url: {{ cookiecutter.domain_name }}
+site_url: https://{{ cookiecutter.domain_name }}
 site_author: {{ cookiecutter.author_name }}
 site_description: >-
   {{ cookiecutter.description }}
