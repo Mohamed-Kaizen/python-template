@@ -7,6 +7,7 @@
   "email": "{{ cookiecutter.author_name|lower|replace(' ', '-') }}@example.com",
   "github_username": "{{ cookiecutter.author_name|lower|replace(' ', '') }}",
   "domain_name": "example.com",
+  "use_typer_for_CLI": "yes",
   "docs_tool": [
     "mkdocs",
     "none"
@@ -20,15 +21,14 @@
     "Mozilla Public License 2.0"
   ],
   "_copy_without_render": [
-        "*.html",
-        "*.js",
-        "*.css",
-        "*.jsx",
-        "*.svelte",
-        "*.ts",
-        "*.tsx",
-        ".github",
-        "*.vue"
+    "*.html",
+    "*.js",
+    "*.css",
+    "*.jsx",
+    "*.svelte",
+    "*.ts",
+    "*.tsx",
+    ".github",
+    "*.vue"
   ]
-
 }

@@ -4,5 +4,5 @@ ignore = E203,E501,W503, B008
 max-line-length = 80
 application-import-names = {{ cookiecutter.project_slug }},tests
 docstring-convention = google
-import-order-style = cryptography
+import-order-style = pep8
 per-file-ignores = tests/*:S101

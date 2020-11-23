@@ -9,7 +9,8 @@ app = typer.Typer(help="{{ cookiecutter.project_name }} CLI.")
 @app.command()
 def version() -> None:
     """Show project Version."""
-    typer.echo(f"Novizi Version: {__version__}")
+    project_name = "{{ cookiecutter.project_name }}"
+    typer.secho(f"{project_name} Version: {__version__}", fg=typer.colors.BRIGHT_GREEN)
 
 
 if __name__ == "__main__":

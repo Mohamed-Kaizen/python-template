@@ -1,9 +1,20 @@
+> ## 🛠 Status: In Development
+> {{ cookiecutter.project_name }} is currently in development. So we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
+>
+> See the list of Known Issues and TODOs, below, for updates.
+
+
+## Overview
+
+{{ cookiecutter.description }}
+
+
 ## Installation
 
 === "Poetry"
     <div class="termy">
     ```console
-    $ poetry install
+    $ poetry add {{ cookiecutter.project_name|lower|replace(' ', '-') }}
     
     ---> 100%
     ```
@@ -12,7 +23,7 @@
 === "Pip"
     <div class="termy">
     ```console
-    $ pip install -r requirements.txt
+    $ pip install poetry add {{ cookiecutter.project_name|lower|replace(' ', '-') }}
     
     ---> 100%
     ```

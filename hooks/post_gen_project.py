@@ -16,6 +16,7 @@ DOCS_FILES_BY_TOOL = {
         "css",
         "js",
         "reference",
+        "overrides",
         "/mkdocs.yml"
     ],
 }

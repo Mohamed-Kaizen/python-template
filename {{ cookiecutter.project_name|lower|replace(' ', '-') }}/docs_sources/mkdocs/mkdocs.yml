@@ -12,13 +12,20 @@ copyright: Copyright &copy; 2020 {{ cookiecutter.author_name }}
 
 theme:
   name: material
+  custom_dir: docs/overrides
   icon:
     repo: fontawesome/brands/github-alt
   features:
-    - tabs
+    - navigation.tabs
+    # - navigation.instant # uncommon this if you don't want SPA mode
 
 plugins:
   - search
+  - macros
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: true
   - minify:
       minify_html: true
   - git-revision-date-localized:
@@ -39,17 +46,31 @@ nav:
 
 
 markdown_extensions:
+  - meta
+  - abbr
+  - pymdownx.snippets
   - admonition
-  - codehilite:
+  - pymdownx.details
+  - pymdownx.highlight:
       linenums: true
-  - toc:
-      permalink: true
-  - pymdownx.superfences:
-      custom_fences:
-          - name: mermaid
-            class: mermaid
-            format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
   - pymdownx.tabbed
+  - footnotes
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - attr_list
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
 
 
 extra_css:
