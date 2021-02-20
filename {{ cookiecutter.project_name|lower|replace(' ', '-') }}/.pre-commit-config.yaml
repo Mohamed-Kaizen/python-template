@@ -3,6 +3,7 @@ repos:
     rev: v2.4.0
     hooks:
     -   id: check-yaml
+        exclude: 'mkdocs.yml'
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: local
@@ -20,5 +21,10 @@ repos:
     -   id: flake8
         name: flake8
         entry: poetry run flake8
+        language: system
+        types: [python]
+    -   id: pyupgrade
+        name: pyupgrade
+        entry: poetry run pyupgrade
         language: system
         types: [python]
