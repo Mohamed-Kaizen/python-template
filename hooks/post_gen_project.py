@@ -15,7 +15,7 @@ DOCS_FILES_BY_TOOL = {
         "index.md",
         "css",
         "js",
-        "reference",
+        "api",
         "overrides",
         "/mkdocs.yml"
     ],

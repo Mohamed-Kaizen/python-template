@@ -6,7 +6,7 @@ import nox
 from nox.sessions import Session
 
 package = "{{ cookiecutter.project_slug }}"
-nox.options.sessions = "lint", "safety", "mypy", "pytype", "tests", "typeguard"
+nox.options.sessions = "lint", "safety", "mypy", "tests", "typeguard"
 locations = "src", "tests", "noxfile.py"
 
 
@@ -38,7 +38,7 @@ def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> Non
         session.install(f"--constraint={requirements.name}", *args, **kwargs)
 
 
-@nox.session(python="3.9")
+@nox.session(python="3.8")
 def black(session: Session) -> None:
     """Run black code formatter."""
     args = session.posargs or locations
@@ -64,7 +64,7 @@ def lint(session: Session) -> None:
     session.run("flake8", *args)
 
 
-@nox.session(python="3.9")
+@nox.session(python="3.8")
 def safety(session: Session) -> None:
     """Scan dependencies for insecure packages."""
     with tempfile.NamedTemporaryFile() as requirements:
@@ -118,7 +118,7 @@ def xdoctest(session: Session) -> None:
     session.run("python", "-m", "xdoctest", package, *args)
 
 
-@nox.session(python="3.9")
+@nox.session(python="3.8")
 def coverage(session: Session) -> None:
     """Upload coverage data."""
     install_with_constraints(session, "coverage[toml]", "codecov")
@@ -126,7 +126,7 @@ def coverage(session: Session) -> None:
     session.run("codecov", *session.posargs)
 
 
-@nox.session(python="3.9")
+@nox.session(python="3.8")
 def docs(session: Session) -> None:
     """Build the documentation."""
     session.run("poetry", "install", "--no-dev", external=True)
@@ -136,7 +136,7 @@ def docs(session: Session) -> None:
         "mkdocs-material",
         "mkdocstrings",
         "mkdocs-minify-plugin",
-        "mkdocs",
         "mkdocs-git-revision-date-localized-plugin",
+        "mkdocs-git-authors-plugin",
     )
     session.run("mkdocs", "build")

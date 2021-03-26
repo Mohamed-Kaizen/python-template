@@ -1,11 +1,11 @@
 {
-  "project_name": "Awesome Django Project",
+  "project_name": "Awesome Python Project",
   "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '_')|replace('-', '_') }}",
   "description": "Behold {{ cookiecutter.project_name}} Project",
   "version": "0.1.0",
   "author_name": "Mohamed Nesredin",
   "email": "{{ cookiecutter.author_name|lower|replace(' ', '-') }}@example.com",
-  "github_username": "{{ cookiecutter.author_name|lower|replace(' ', '') }}",
+  "github_username": "Mohamed-Kaizen",
   "domain_name": "example.com",
   "use_typer_for_CLI": "yes",
   "docs_tool": [

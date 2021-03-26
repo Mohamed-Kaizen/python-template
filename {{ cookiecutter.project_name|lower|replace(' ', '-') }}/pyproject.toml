@@ -18,7 +18,7 @@ include = [
 python = "^3.8"
 pydantic = "^1.8"
 {% if cookiecutter.use_typer_for_CLI == 'yes' -%}typer = {extras = ["all"], version = "^0.3.2"}{%- endif %}
-{% if cookiecutter.use_typer_for_CLI == 'yes' -%}rich = "^9.12"{%- endif %}
+{% if cookiecutter.use_typer_for_CLI == 'yes' -%}rich = "^9.13"{%- endif %}
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
@@ -26,20 +26,21 @@ codecov = "^2.1"
 coverage = {extras = ["toml"], version = "^5.5"}
 darglint = "^1.7"
 flake8 = "^3.8"
-flake8-annotations = "^2.5"
+flake8-annotations = "^2.6"
 flake8-bandit = "^2.1"
 flake8-black = "^0.2"
-flake8-bugbear = "^20.11"
-flake8-docstrings = "^1.5"
+flake8-bugbear = "^21.3"
+flake8-docstrings = "^1.6"
 flake8-import-order = "^0.18"
-isort = "^5.7"
+hypothesis = "^6.8.1"
+isort = "^5.8"
 mypy = "^0.812"
 pytest = "^6.2"
 pytest-cov = "^2.11"
 safety = "^1.10"
 typeguard = "^2.11"
 xdoctest = "^0.15"
-radon = "^4.3"
+radon = "^4.5"
 {% if cookiecutter.docs_tool == 'mkdocs' -%}mkdocs-material = "^7.0"{%- endif %}
 {% if cookiecutter.docs_tool == 'mkdocs' -%}mkdocstrings = "^0.15"{%- endif %}
 {% if cookiecutter.docs_tool == 'mkdocs' -%}mkdocs-minify-plugin = "^0.4"{%- endif %}

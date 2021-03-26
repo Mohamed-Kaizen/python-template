@@ -6,7 +6,7 @@ site_description: >-
 
 repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}
 repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}/
-edit_uri: ''
+edit_uri: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}/tree/master/docs
 
 copyright: Copyright &copy; 2020 {{ cookiecutter.author_name }}
 
@@ -17,11 +17,16 @@ theme:
     repo: fontawesome/brands/github-alt
   features:
     - navigation.tabs
-    # - navigation.instant # uncommon this if you don't want SPA mode
+    - navigation.instant # common this if you don't want SPA mode
+
+
+# google_analytics:
+#   - UA-XXXXXXXX-X
+#   - auto
+
 
 plugins:
   - search
-  - macros
   - git-authors:
       show_contribution: true
       show_line_count: true
@@ -41,8 +46,8 @@ plugins:
 
 nav:
   - Home: 'index.md'
-  - Reference:
-      - Manage: "reference/manage.md"
+  - API:
+      - Manage: "api/manage.md"
 
 
 markdown_extensions:
