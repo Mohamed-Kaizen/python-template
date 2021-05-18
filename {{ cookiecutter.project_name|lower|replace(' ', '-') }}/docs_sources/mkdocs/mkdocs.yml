@@ -8,15 +8,30 @@ repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower
 repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}/
 edit_uri: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name|lower|replace(' ', '-')|replace('_', '-') }}/tree/master/docs
 
-copyright: Copyright &copy; 2020 {{ cookiecutter.author_name }}
+copyright: Copyright &copy; 2021 {{ cookiecutter.author_name }}
 
 theme:
   name: material
   custom_dir: docs/overrides
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
   icon:
     repo: fontawesome/brands/github-alt
   features:
+    - search.suggest
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.instant # common this if you don't want SPA mode
 
 
